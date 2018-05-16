@@ -1,7 +1,5 @@
 <template>
   <div class="main">
-    <div class="modal">
-      <div class="services">
         <h1>Services</h1>
         <ul>
           <li>Web Development - Responsive Websites up to the current standards of web design.</li>
@@ -9,41 +7,31 @@
           <li>Graphic Design - Rebranding, Logo Design, and ANY Media Development you need.</li>
           <li>Marketing - Social Media marketing and Ad campaigns for your businesses growth.</li>
         </ul>
+        <h2>The Founders</h2>
         <p class="blurb">At Screen Art Studios we to bring your ideas and our creative and technical power together to create something unique.<br/>
           Whether you have an idea for a new mobile application or if you need a complete rebranding of your company's media, Screen Art does it all.</p>
-      </div>
-      <h2>The Founders</h2>
-      <div class="bon">
         <div class="bonImage"></div>
-        <p class="bio">
+        <p class="bonbio">
           Bonham Goodman is the Lead Developer and a Co-Founder of Screen Art Studios. A Full Stack Web Developer
           specializing in the Quick Venom Stack as well as an expert in backend API servers.
         </p>
-      </div>
-      <div class="avery">
         <div class="averyImage"></div>
-        <p class="bio">
+        <p class="averybio">
           Avery Angel is a Developer and a Co-Founder of Screen Art Studios. A Full Stack Web Developer
           specializing in the Quick Venom Stack as well as a Graphic Designer, and Photographer.
         </p>
-      </div>
-      <div class="royce">
         <div class="royceImage"></div>
-        <p class="bio">
+        <p class="roycebio">
           Royce Birnbaum is the President and Co-Founder of Screen Art Studios. A Full Stack Web Developer
           specializing in the Quick Venom Stack as well as an Author, Graphic Designer, and Photographer.
         </p>
-      </div>
-      <div class="kris">
         <div class="krisImage"></div>
-        <p class="bio">
+        <p class="krisbio">
           Kristoffer St. John is the Vice President and Co-Founder of Screen Art Studios.
           A Full Stack Web Developer specializing in the Quick Venom Stack as well
           as an Artist, Graphic Designer, and Photographer.
         </p>
-      </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -64,8 +52,8 @@ export default {
 
   .main {
     margin-top: 145px;
-    margin-left: 3%;
-    width: 95%;
+    margin-left: 5%;
+    width: 90%;
     height: 68%;
     z-index: 10;
     position: fixed;
@@ -73,83 +61,104 @@ export default {
     border-radius: 12px;
     box-shadow: 2px 2px 4px #000;
     color: #fff;
-    overflow: hidden;
+    overflow-y: scroll;
     font-family: @base-font;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(35, 3em);
   }
   h1 {
     text-align: center;
     grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    font-size: 3em;
+  }
+  ul {
+    grid-row-start: 7;
+    grid-row-end: 12;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    line-height: 25px;
+    margin-left: 5%;
   }
   h2 {
     text-align: center;
-    width: 100%;
-    margin-top: 250px;
+    grid-row: 12;
+    grid-column-start: 1;
+    grid-column-end: 11;
   }
-  .modal {
-    overflow-y: scroll;
-    height: 100%;
-    display: grid;
-    grid-template-rows: repeat(11, 200px);
-  }
-
-  .royce {
-    grid-row: 4;
-    margin-left: 5%;
-  }
-
   .royceImage {
     background-image: url('../assets/RoyceHeadshot.png');
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     width: 100%;
     height: 100%;
-    margin-left: 10%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 14;
+    grid-row-end: 18;
   }
-
-  .kris {
-    margin-left: 5%;
-    grid-row: 6;
-  }
-
   .krisImage {
     background-image: url('../assets/KrisHeadshot.png');
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     width: 100%;
     height: 100%;
-    margin-left: 10%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 19;
+    grid-row-end: 23;
   }
-
-  .bon {
-    grid-row: 8;
-    margin-left: 5%;
-  }
-
   .bonImage {
     background-image: url('../assets/BonHeadshot.png');
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     width: 100%;
     height: 100%;
-    margin-left: 10%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 24;
+    grid-row-end: 28;
   }
-
-  .avery {
-    grid-row: 10;
-    margin-left: 5%;
-  }
-
   .averyImage {
     background-image: url('../assets/AveryHeadshot.png');
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     width: 100%;
     height: 100%;
-    margin-left: 10%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 29;
+    grid-row-end: 33;
   }
-
-  .services {
-    grid-row: 1;
+  .roycebio {
+    grid-row-start: 15;
+    grid-row-end: 18;
+    grid-column-start: 5;
+    grid-column-end: 11;
   }
-  .bio {
-    width: 70%;
-    margin-left: 15%;
+  .averybio {
+    grid-column-start: 5;
+    grid-column-end: 11;
+    grid-row-start: 30;
+    grid-row-end: 32;
+  }
+  .krisbio {
+    grid-row-start: 20;
+    grid-row-end: 24;
+    grid-column-start: 5;
+    grid-column-end: 11;
+  }
+  .bonbio {
+    grid-column-start: 5;
+    grid-column-end: 11;
+    grid-row-start: 25;
+    grid-row-end: 28;
   }
   .blurb {
     text-align: center;
@@ -157,80 +166,36 @@ export default {
     background-color: #c22227;
     padding: 5px;
     border-radius: 10px;
+    grid-row-start: 3;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 11;
   }
   @media only screen and (min-width:400px) {
-    .royceImage {
-      margin-left: 20%;
-    }
-    .krisImage {
-      margin-left: 20%;
-    }
-    .bonImage {
-      margin-left: 20%;
-    }
-    .averyImage {
-      margin-left: 20%;
-    }
   }
   @media only screen and (min-width:700px) {
-
-    p {
-      font-size: 2em;
+    ul {
+      font-size: 1.5em;
     }
     .blurb {
-      font-size: 2.5em;
-      line-height: 35px;
+      font-size: 1.8em;
     }
-
-    li {
+    p {
       font-size: 1.4em;
-      margin-left: 5%;
-    }
-    .royceImage {
-      margin-left: 33%;
-    }
-    .krisImage {
-      margin-left: 33%;
-    }
-    .bonImage {
-      margin-left: 33%;
-    }
-    .averyImage {
-      margin-left: 33%;
     }
   }
     @media only screen and (min-width: 1000px) {
-      .royceImage {
-        margin-left: 36%;
-      }
-      .krisImage {
-        margin-left: 36%;
-      }
-      .bonImage {
-        margin-left: 36%;
-      }
-      .averyImage {
-        margin-left: 36%;
-      }
-      li {
-        margin-left: 15%;
-      }
     }
     @media only screen and (min-width: 1400px) {
-      li {
-        margin-left: 25%;
+      ul {
+        font-size: 2.5em;
+        line-height: 50px;
       }
-      .royceImage {
-        margin-left: 40%;
+      .blurb {
+        font-size: 2.2em;
       }
-      .krisImage {
-        margin-left: 40%;
-      }
-      .bonImage {
-        margin-left: 40%;
-      }
-      .averyImage {
-        margin-left: 40%;
+      p {
+        font-size: 2em;
       }
     }
 </style>

@@ -10,6 +10,7 @@
         this greatly improves the users survivability in an emergency situation. Available
         on iOS and Android marketplaces Summer 2018.
       </p>
+      <div class="TRpic"></div>
       <button class="back" v-on:click="modal=''">Back</button>
     </div>
     <div class="quickVenomModal modal" v-else-if="modal==='qc'">
@@ -28,25 +29,34 @@
       <h1>Time Crunch</h1>
       <p>
         TimeCrunch is a mobile app service for companies that want a simple and economic system for Clocking employee time and mileage tracking. Functional and helpful for administators and
-        easy to use for employees, TimeCrunch is an asset for any companies toolkit.
+        easy to use for employees, TimeCrunch is an asset for any companies toolkit. For more info go to <a href="https://timecrunchapp.com/">Time Crunch Site</a>
       </p>
+      <div class="TCpic"></div>
       <button class="back" v-on:click="modal=''">Back</button>
     </div>
-    <div class="hammurabiGameModal modal" v-else-if="modal==='hm'">
-      <h1>Hammurabi 3000</h1>
+    <div class="mysticModal modal" v-else-if="modal==='ms'">
+      <h1>Mystic CRM</h1>
       <p>
-        Hammurabi 3000 is our remake of the classic Hammurabi Game, reimagined in a dystopian future you Overlord Hammurabi have been
-        ressurected to manage the Galactic Dominion! With more strategy, more rations, and a whole load of space crabs Hammurabi 3000 is
-        an addictive turn based strategy game coming to mobile app stores early 2018.
+        Mystic is the perfect tool for running every aspect of your small business. From scheduling and customer relations management to marketing campaigns, Mystic empowers the small business owner.
       </p>
+      <div class="MSpic"></div>
+      <button class="back" v-on:click="modal=''">Back</button>
+    </div>
+    <div class="blakeLSModal modal" v-else-if="modal==='bl'">
+      <h1>Blake Late Show</h1>
+      <p>
+        Activist Ron Blake has been inspiring thousands of people around the country. Giving support and hope to victims of PTSD and sexual assault through his incredible story of survival and perseverance. Learn more here <a href="https://blakelateshow.com/">Blakelateshow.com</a>
+      </p>
+      <div class="BLpic"></div>
       <button class="back" v-on:click="modal=''">Back</button>
     </div>
     <div class="tiles" v-else>
-      <div class="work"><h1>Work</h1></div>
+      <h1>Work</h1>
       <div class="totalResponse clickMe" v-on:click="modal='tr'"></div>
       <div class="quickVenom clickMe" v-on:click="modal='qc'"></div>
       <div class="timeCrunch clickMe" v-on:click="modal='tc'"></div>
-      <div class="hammurabiGame clickMe" v-on:click="modal='hm'"></div>
+      <div class="mystic clickMe" v-on:click="modal='ms'"></div>
+      <div class="blakeLS clickMe" v-on:click="modal='bl'">Blake Late Show</div>
     </div>
   </div>
 </template>
@@ -69,30 +79,28 @@ export default {
     margin-left: 3%;
     margin-top: 145px;
     width: 95%;
-    height: 68%;
+    height: 75%;
     z-index: 4;
     color: #fff;
     position: fixed;
     background:rgba(0,0,0,0.6);
     border-radius: 12px;
     box-shadow: 2px 2px 4px #000;
-  }
-
-  .work {
-    grid-row: 1;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    overflow-y: scroll;
   }
 
   h1 {
     font-family: @base-font;
     font-weight: lighter;
-    font-size: 2.5em;
+    font-size: 3em;
     color: #fff;
     text-shadow: 2px 4px 3px black;
     text-align: center;
     line-height: 100px;
     margin: 0;
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 9;
   }
 
   button {
@@ -100,45 +108,51 @@ export default {
     color: #fff;
     border-color: #fff;
     font-size: 1.5em;
-    margin-left: 5%;
-    width: 90%;
+    width: 100%;
   }
 
   .modal {
     display: grid;
-    grid-template-rows: 90px repeat(4, 80px);
+    grid-template-rows: repeat(20, 4em);
   }
 
   .modal h1 {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 9;
     grid-row: 1;
   }
 
   p {
-    grid-row-start: 2;
-    grid-column: 2;
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 9;
     font-family: @base-font;
     color: white;
     line-height: 1.1em;
-    font-size: 1.1em;
-    width: 100%;
+    font-size: 1.5em;
+    width: 90%;
+    margin-left: 5%;
     text-align: left;
-    margin-right: 10px;
+    margin-right: 5%;
   }
 
   .back {
+    margin-left: 5%;
+    margin-top: 1.5em;
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row: 5;
+    grid-row: 1;
     height: 40px;
+    align-self: center;
   }
 
   .tiles {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(18, 3.5em);
+    grid-row-gap: 5px;
     text-align: center;
     margin-top: 20px;
   }
@@ -156,11 +170,23 @@ export default {
     width: 100%;
     height: auto;
     z-index: 10;
-    grid-column: 1;
-    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 3;
+    grid-row-end: 5;
     background-color:rgba(0,0,0,0.4);
     border-radius: 12px;
     box-shadow: 2px 2px 4px #000;
+  }
+  .TRpic {
+    background-position: center;
+    background-image: url('../assets/trapp.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 8;
+    grid-row-end: 17;
   }
 
   .quickVenom {
@@ -171,11 +197,13 @@ export default {
     height: auto;
     z-index: 10;
     background-size: contain;
-    grid-row: 2;
-    grid-column: 2;
     background-color:rgba(0,0,0,0.4);
     border-radius: 12px;
     box-shadow: 2px 2px 4px #000;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 9;
+    grid-row-end: 11;
   }
 
   .timeCrunch {
@@ -185,65 +213,74 @@ export default {
     background-size: contain;
     width: 100%;
     height: auto;
-    grid-row: 3;
-    grid-column: 1;
     background-color:rgba(0,0,0,0.4);
     border-radius: 12px;
     box-shadow: 2px 2px 4px #000;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 5;
+    grid-row-end: 7;
   }
-
-  .hammurabiGame {
+  .TCpic {
     background-position: center;
-    background-image: url('../assets/Hammurabi3000.svg');
+    background-image: url('../assets/tcapp.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 8;
+    grid-row-end: 17;
+  }
+  .blakeLS {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 3em;
+    line-height: 100px;
+    width: 100%;
+    height: auto;
+    background-color:rgba(0,0,0,0.4);
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px #000;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 11;
+    grid-row-end: 13;
+  }
+  .BLpic {
+    background-position: center;
+    background-image: url('../assets/blake.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 7;
+    grid-row-end: 17;
+  }
+  .mystic {
+    background-position: center;
+    background-image: url('../assets/Mystic.svg');
     background-repeat:no-repeat;
-    background-size:contain;
+    background-size: contain;
     width: 100%;
     height: 100%;
-    grid-row: 3;
-    grid-column: 2;
     background-color:rgba(0,0,0,0.4);
     border-radius: 12px;
     box-shadow: 2px 2px 4px #000;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 7;
+    grid-row-end: 9;
+  }
+  .MSpic {
+    background-position: center;
+    background-image: url('../assets/mystic.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 7;
+    grid-row-end: 20;
   }
 
   @media only screen and (min-width:700px) {
-
-    .tiles {
-      text-align: center;
-      width: 100%;
-      display: grid;
-      grid-template-rows: repeat(5, 80px);
-    }
-
-    .work {
-      grid-row: 1;
-      margin-top: -30px;
-    }
-
-    .totalResponse {
-      grid-row: 2;
-    }
-
-    .quickVenom {
-      grid-row: 3;
-    }
-
-    .timeCrunch {
-      grid-row: 4;
-    }
-
-    .hammurabiGame {
-      grid-row: 5;
-    }
-
-    .clickMe {
-      background-color:rgba(0,0,0,0.4);
-      border-radius: 6px;
-      box-shadow: 2px 2px 4px #000;
-      color: #fff;
-    }
-    .clickMe:hover {
-      background-color: #999;
-    }
   }
 </style>

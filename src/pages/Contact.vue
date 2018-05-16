@@ -9,12 +9,9 @@
       <div class="success" v-if="success">Your Message Was Sent!</div>
       <div class="error" v-else-if="error">OH NO Message Failed</div>
       <div v-on:click="send" class="send" v-else>SEND</div>
-      <ul>
-        <li>(480)-526-2634</li>
-        <li>(602)-558-1817</li>
-      </ul>
+      <h1>(602)-558-1817</h1>
       <h3 class="blurb">
-        We understand that your time is important. So we'll do
+        We understand that your time is important.<br/> So we'll do
         our best to respond quickly!
       </h3>
     </div>
@@ -116,7 +113,15 @@ export default {
     border-radius: 12px;
     box-shadow: 2px 2px 4px #000;
   }
-
+  h1 {
+    font-family: @base-font;
+    font-weight: lighter;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 2px 2px 3px black;
+    text-align: center;
+    margin-bottom: 2em;
+  }
   h2 {
     font-family: @base-font;
     font-weight: lighter;
@@ -368,7 +373,7 @@ textarea:hover {
   color: #fff;
 }
 
-@media only screen and (min-width:700px) {
+@media (min-width:700px) {
   .main {
     margin-left: 5px;
     margin-top: 145px;
@@ -380,7 +385,12 @@ textarea:hover {
     border-radius: 12px;
     box-shadow: 2px 2px 4px #000;
   }
-
+  h1 {
+    grid-column-start: 6;
+    grid-column-end: 11;
+    grid-row: 3;
+    font-size: 2.5em;
+  }
   h2 {
     font-family: @base-font;
     font-weight: lighter;
@@ -404,22 +414,6 @@ textarea:hover {
     margin-right: 20px;
   }
 
-  ul {
-    font-family: @base-font;
-    font-weight: lighter;
-    font-size: 1.5em;
-    color: #fff;
-    text-shadow: 2px 2px 3px black;
-    text-align: center;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 3;
-    grid-column-end: 6;
-    list-style: none;
-    line-height: 80px;
-    margin-right: 70px;
-  }
-
   .words {
     grid-row: 1;
     grid-column-start: 1;
@@ -441,21 +435,19 @@ textarea:hover {
   }
 
   .blurb {
-    grid-row-start: 5;
+    grid-row-start: 4;
     grid-row-end: 7;
-    grid-column-start: 3;
-    grid-column-end: 6;
+    grid-column-start: 6;
+    grid-column-end: 11;
     line-height: 28px;
     font-size: 2em;
     margin-top: 60px;
   }
 
   .contactBox {
-    margin-left: 50px;
-    margin-right: 15px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 70px 30px 30px 30px 150px 25px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 4em);
     overflow: hidden;
   }
 
@@ -474,16 +466,16 @@ textarea:hover {
   }
 
   .name {
-  grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 6;
   grid-row: 2;
   margin-bottom: 5px;
   font-size: 1.3em;
   }
 
   .email {
-  grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 6;
   grid-row: 3;
   box-sizing: border-box;
   margin-bottom: 5px;
@@ -491,16 +483,16 @@ textarea:hover {
   }
 
   .phone {
-  grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 6;
   grid-row: 4;
   margin-bottom: 5px;
   font-size: 1.3em;
   }
 
   .message {
-  grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 6;
   grid-row-start: 5;
   grid-row-end: 6;
   box-sizing: border-box;
@@ -511,8 +503,8 @@ textarea:hover {
     margin: 0;
     padding: 0;
     margin-top: 90px;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 6;
     grid-row-start: 5;
     grid-row-end: 7;
     text-align: center;
