@@ -145,7 +145,7 @@ export default {
   .navbar {
     width: 100%;
     height: 135px;
-    background:rgba(0,0,0,0.5);
+    background:rgba(0,0,0,0.2);
     position: fixed;
     top: 0;
     left: 0;
@@ -285,7 +285,7 @@ export default {
     left: 0;
     right: 0;
     overflow: hidden;
-    z-index: -1;
+    z-index: 2;
     height: 135px;
   }
 
@@ -439,7 +439,7 @@ export default {
         left: 0;
         right: 0;
         overflow: hidden;
-        z-index: -1;
+        z-index: 2;
         height: 100%;
       }
 

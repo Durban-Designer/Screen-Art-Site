@@ -77,14 +77,12 @@ export default {
   @base-font:'Pathway Gothic One', sans-serif;
 
 .main {
-  margin-top: 145px;
-  margin-left: 2%;
-  width: 96%;
-  height: 68%;
-  z-index: 10;
+  padding-top: 140px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
   position: fixed;
   background:rgba(0,0,0,0.6);
-  border-radius: 12px;
   box-shadow: 2px 2px 4px #000;
 }
 
@@ -286,7 +284,8 @@ textarea:hover {
 
 @media only screen and (min-width:750px) {
   .main {
-    margin-top: 13%;
+    z-index: 3;
   }
+
 }
 </style>

@@ -76,15 +76,13 @@ export default {
   @base-font:'Pathway Gothic One', sans-serif;
 
   .main {
-    margin-left: 3%;
-    margin-top: 145px;
-    width: 95%;
-    height: 75%;
-    z-index: 4;
+    padding-top: 140px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
     color: #fff;
     position: fixed;
     background:rgba(0,0,0,0.6);
-    border-radius: 12px;
     box-shadow: 2px 2px 4px #000;
     overflow-y: scroll;
   }
@@ -282,5 +280,8 @@ export default {
   }
 
   @media only screen and (min-width:700px) {
+    .main {
+      z-index: 3;
+    }
   }
 </style>

@@ -51,14 +51,12 @@ export default {
   @base-font:'Pathway Gothic One', sans-serif;
 
   .main {
-    margin-top: 145px;
-    margin-left: 5%;
-    width: 90%;
-    height: 68%;
-    z-index: 10;
+    padding-top: 140px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
     position: fixed;
     background:rgba(0,0,0,0.6);
-    border-radius: 12px;
     box-shadow: 2px 2px 4px #000;
     color: #fff;
     overflow-y: scroll;
@@ -182,6 +180,9 @@ export default {
     }
     p {
       font-size: 1.4em;
+    }
+    .main {
+      z-index: 3;
     }
   }
     @media only screen and (min-width: 1000px) {

@@ -102,21 +102,18 @@ export default {
   @base-font:'Pathway Gothic One', sans-serif;
 
   .main {
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 145px;
-    width: 96%;
-    height: 68%;
-    z-index: 4;
+    padding-top: 140px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
     position: fixed;
     background:rgba(0,0,0,0.6);
-    border-radius: 12px;
     box-shadow: 2px 2px 4px #000;
   }
   h1 {
     font-family: @base-font;
     font-weight: lighter;
-    font-size: 2em;
+    font-size: 2.5em;
     color: #fff;
     text-shadow: 2px 2px 3px black;
     text-align: center;
@@ -125,11 +122,11 @@ export default {
   h2 {
     font-family: @base-font;
     font-weight: lighter;
-    font-size: 1.4em;
+    font-size: 3em;
     color: #fff;
     text-shadow: 2px 2px 3px black;
     text-align: center;
-    line-height: 50px;
+    line-height: 90px;
     margin: 4px;
   }
 
@@ -375,15 +372,7 @@ textarea:hover {
 
 @media (min-width:700px) {
   .main {
-    margin-left: 5px;
-    margin-top: 145px;
-    width: 99%;
-    height: 70%;
-    z-index: 4;
-    position: fixed;
-    background:rgba(0,0,0,0.6);
-    border-radius: 12px;
-    box-shadow: 2px 2px 4px #000;
+    z-index: 3;
   }
   h1 {
     grid-column-start: 6;

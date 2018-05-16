@@ -22,6 +22,7 @@ export default {
 @base-font:'Pathway Gothic One', sans-serif;
 
 .main {
+  z-index: 3;
   margin-top: 135px;
   width: 100%;
   height: 600px;
