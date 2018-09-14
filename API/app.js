@@ -13,6 +13,7 @@ require("./message");
 var messages = require("./messages.js");
 require("./prospect");
 var prospects = require("./prospects.js");
+var deep = require("./deep");
 
 mongoose.Promise = global.Promise;
 
@@ -33,6 +34,7 @@ app.use(function(req, res, next) {
   next()
 })
 
+app.use("/deep", deep);
 app.use("/users", users);
 app.use("/leads", leads);
 app.use("/messages", messages);
